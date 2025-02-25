@@ -1,0 +1,24 @@
+---------------------------------------------------
+Here are the ownership and the certification details
+of the Tic Tac Toe 1.0
+---------------------------------------------------
+
+app_name - 						Tic Tac Toe
+app_alias - 					tictac
+app_author_name - 				My Company
+app_author_organizational - 	My Company
+app_author_organization - 		My Company
+app_author_locality - 			My Company
+app_author_state - 				Bagmati
+app_author_country - 			Nepal
+app_password - 					yVEdyJyhiI44
+app_versionName - 				versionName "1.0"
+app_versionCode - 				100
+
+---------------------------------------------------
+The certification was created by WebIntoApp.com at
+the Sunday 26th of November 2023 11:58:14 AM
+
+https://www.webintoapp.com
+---------------------------------------------------
+
