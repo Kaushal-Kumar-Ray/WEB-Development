@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let moves = 0;
     let gameOver = false;
 
+    // Load tap sound effect
+    const tapSound = new Audio('tap.mp3');
+
     // Create the Tic-Tac-Toe grid
     for (let i = 0; i < 9; i++) {
         const cell = document.createElement('div');
@@ -24,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Cell already selected. Choose another cell.');
             return;
         }
+
+        // Play tap sound
+        tapSound.currentTime = 0; // Reset sound if it's played again quickly
+        tapSound.play();
 
         // Update the cell with the current player's mark
         clickedCell.textContent = currentPlayer;
@@ -117,4 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial update of the turn indicator
     updateTurnIndicator();
+
+    // Optimize board for mobile
+    board.style.display = 'grid';
+    board.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    board.style.gridGap = '5px';
+    board.style.maxWidth = '300px';
+    board.style.width = '90vw';
+    board.style.margin = 'auto';
+
+    for (const cell of cells) {
+        cell.style.width = '100%';
+        cell.style.height = '80px';
+        cell.style.fontSize = '20px';
+    }
+
+    // Responsive adjustments
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 500) {
+            for (const cell of cells) {
+                cell.style.height = '60px';
+                cell.style.fontSize = '16px';
+            }
+        } else {
+            for (const cell of cells) {
+                cell.style.height = '80px';
+                cell.style.fontSize = '20px';
+            }
+        }
+    });
 });
